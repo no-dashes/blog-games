@@ -1,0 +1,8 @@
+<%= simple_form_for @post do |f| %>
+  <%= f.input :title %>
+  <%= f.association :category %>
+  <%= f.input :author %>
+  <%= f.input :body %>
+  <%= f.input :published_at, as: :datetime %>
+  <%= f.submit %>
+<% end %>

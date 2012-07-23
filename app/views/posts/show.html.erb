@@ -1,0 +1,24 @@
+<h1><%= @post.title %></h1>
+<p><b>by <%= @post.author %> at <%= @post.published_at %></b></p>
+
+<p><%= @post.body %></p>
+
+<h2>Comments</h2>
+
+<% if @post.comments.count == 0 %>
+  <p>No comments, yet.</p>
+<% else %>
+  <ul>
+    <% @post.comments.each do |comment| %>
+      <li>
+        <%= comment.author %>: <%= comment.body %>
+        (<%= link_to "[x]", post_comment_path(@post, comment), method: :delete, confirm: "Deally delete comment?" %>)
+      </li>
+    <% end -%>
+  </ul>
+<% end -%>
+
+<%= link_to 'Comment', new_post_comment_path(@post) %> |
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'All Posts', posts_path %> |
+<%= link_to 'Delete', post_path(@post), method: :delete, confirm: "Really Delete post #{@post.title}" %>
