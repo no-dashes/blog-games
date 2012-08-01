@@ -7,5 +7,5 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Category.create!(title: "Haustiere")
-Category.create!(title: "Fahrzeuge")
+Category.create!(title: "Lebensmittel")
 Category.create!(title: "Gesundheit")
