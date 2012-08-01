@@ -8,4 +8,5 @@
 
 Category.create!(title: "Haustiere")
 Category.create!(title: "Blumen")
+Category.create!(title: "Lebensmittel")
 Category.create!(title: "Gesundheit")
