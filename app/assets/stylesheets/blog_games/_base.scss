@@ -1,0 +1,22 @@
+$base-font: Verdana;
+$fun-color: #a00;
+
+body {
+  font-family: $base-font;
+}
+
+div#content {
+  border: 1px solid red;
+  margin: 10px;
+  padding: 10px;
+
+  h1 {
+    margin-top: 0px;
+    color: $fun-color;
+  }
+
+  h2 {
+    color: lighten($fun-color, 50%);
+  }
+
+}
